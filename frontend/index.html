@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Event Management System</title>
+    <style>
+        :root {
+            --primary-color: #004d40;
+            --accent-color: #00796b;
+            --text-color: #212121;
+            --bg-color: #f4f6f8;
+            --card-bg: #ffffff;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: #ffffff;
+            padding: 1.5rem 2rem;
+            text-align: center;
+        }
+
+        main {
+            max-width: 1100px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            main {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        section, article {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        h1, h2, h3 {
+            margin-top: 0;
+        }
+
+        .event-card {
+            border-left: 5px solid var(--accent-color);
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background-color: #fafafa;
+        }
+
+        .form-group {
+            margin-bottom: 1.2rem;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 0.4rem;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 0.6rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 1rem;
+        }
+
+        input:focus, select:focus {
+            outline: 3px solid var(--accent-color);
+        }
+
+        button {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: var(--accent-color);
+        }
+
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            background-color: #212121;
+            color: #ffffff;
+            margin-top: 3rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Campus Event Management System</h1>
+        <p>Discover, Register, and Participate in University Events</p>
+    </header>
+
+    <main>
+        <!-- Event Catalog Section -->
+        <section aria-labelledby="catalog-heading">
+            <h2 id="catalog-heading">Upcoming Campus Events</h2>
+
+            <article class="event-card">
+                <h3>Annual Tech Symposium 2026</h3>
+                <p><strong>Date:</strong> November 15, 2026</p>
+                <p><strong>Location:</strong> University Main Auditorium</p>
+                <p>Explore emerging trends in AI, Cybersecurity, and Cloud Solutions with guest speakers from industry leaders.</p>
+            </article>
+
+            <article class="event-card">
+                <h3>Campus Developer Hackathon</h3>
+                <p><strong>Date:</strong> December 02, 2026</p>
+                <p><strong>Location:</strong> IT Computer Laboratories</p>
+                <p>A 24-hour sprint building solution-oriented web and mobile applications for local communities.</p>
+            </article>
+        </section>
+
+        <!-- Registration Form Section -->
+        <section aria-labelledby="registration-heading">
+            <h2 id="registration-heading">Register for an Event</h2>
+
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" name="fullName" required aria-label="Full Name" placeholder="e.g., John Doe">
+                </div>
+
+                <div class="form-group">
+                    <label for="studentEmail">Student Email</label>
+                    <input type="email" id="studentEmail" name="studentEmail" required aria-label="Student Email Address" placeholder="student@univ.edu.ph">
+                </div>
+
+                <div class="form-group">
+                    <label for="eventSelect">Select Event</label>
+                    <select id="eventSelect" name="eventId" required aria-label="Select Campus Event">
+                        <option value="">-- Choose an Event --</option>
+                        <option value="1">Annual Tech Symposium 2026</option>
+                        <option value="2">Campus Developer Hackathon</option>
+                    </select>
+                </div>
+
+                <button type="submit" aria-label="Submit Event Registration">Complete Registration</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Campus Event Platform | Built for WPH Academy Assessment</p>
+    </footer>
+
+</body>
+</html>
